@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='grid grid-cols-2 justify-items-center'>
           <Func_Card 
           image="https://i.pinimg.com/736x/fc/b3/7b/fcb37b0d9a614477f84cbd7f6866fb8c.jpg" 
           title="Psychopath 01"
