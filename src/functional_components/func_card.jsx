@@ -5,6 +5,7 @@ import { useState } from "react";
 function Func_Card({image, title, text}){
     
     const [hasVoted, setHasVoted] = useState(false)
+    const [count, setCount] = useState(0);
 
     return (
         <div className="max-w-3xs min-w-[200px] p-1.5">
@@ -14,9 +15,10 @@ function Func_Card({image, title, text}){
             <button type="button" className="border-2 rounded-[10px] p-0.5 w-full cursor-pointer" 
             onClick={() => {
                 setHasVoted(true)
-                console.log("log")
+                setCount(count + 1)
             }}>
-                {hasVoted ? "Voted": "Vote"}
+                {hasVoted ? "Voted": "Vote"} <br />
+                {count}
             </button>
         </div>
     )
