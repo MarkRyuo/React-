@@ -1,40 +1,50 @@
-import { useState } from "react";
-
-
-
+import { useEffect, useState } from "react";
 
 
 function Counter() {
 
     const [count, setCount] = useState(0);
-    const [theme, setTheme] = useState()
+    const [theme, setTheme] = useState("Black")
 
     const increment = () => {
         setCount(prevCount => prevCount + 1)
+        
     }
 
-    const changeColor = () => {
+    useEffect(() => {
         setTheme(() => {
-            if(count <= 0 ){
-                return "Red"
-            }else if(count >= 1 ){
+            if(count >= 1 ){
                 return "Green"
+            }else if(count <= -1){
+                return "Red"
             }
 
             return "Black"
         })
-    }
+    }, [count])
+
+    useEffect(() => {
+        const handleKey = (e) => {
+            if(e.key === "Enter") {
+                e.preventDefault()
+                setCount(prevCount => prevCount + 1)
+            }
+        }
+
+        window.addEventListener("keydown", handleKey)
+
+        return () => window.removeEventListener("keydown", handleKey)
+    }, [])
+
 
     return(
         <div>
             <button type="button" onClick={() => {
                 setCount((prevCount) => prevCount - 1 )
-                changeColor()
             }}>-</button>
             <p>{count} {theme}</p>
             <button type="button" onClick={() => {
                 increment()
-                changeColor()
             }}>+</button>
         </div>
     )
