@@ -29,10 +29,12 @@ function Counter() {
             if(e.key === "Enter") {
                 e.preventDefault()
                 setCount(prevCount => prevCount + 1)
-            }else if(e.key === "Backspace"){
+                console.log(`You hit ${e.key}`)
+            }else if(e.key === "a"){
                 e.preventDefault()
+                e.stopPropagation();
                 setCount(prevCount => prevCount - 1)
-                console.log(e)
+                console.log(`You hit ${e.key}`)
             }
         }
 
