@@ -1,4 +1,5 @@
 import './App.css'
+import Counter from './functional_components/counter.jsx'
 import Func_Card from './functional_components/func_card.jsx'
 
 function App() {
@@ -17,6 +18,10 @@ function App() {
           title="Psychopath 02"
           text="The quick brown fox jumps over the lazy dog!"
           />
+      </div>
+
+      <div>
+        <Counter />
       </div>
     </>
   )
