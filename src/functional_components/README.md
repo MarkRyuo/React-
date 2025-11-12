@@ -14,3 +14,11 @@ Originally, they were stateless — but since React v16.8 (2019) introduced Hook
 - Era:
 Dominates modern React (2019–present).
 Almost all new React codebases use this style.
+
+
+
+useState()
+
+useEffect(() => {
+    // effect logic here 
+}, [dependencies]) // dependency array 

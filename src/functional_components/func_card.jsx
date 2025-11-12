@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
 function Func_Card({image, title, text}){
     
-    const [hasVoted, setHasVoted] = useState(false)
+    const [hasVoted, setHasVoted] = useState(false) ;
     const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        console.log(`${title} has Been Voted ${hasVoted}`)
+    }, [title, hasVoted])
 
     return (
         <div className="max-w-3xs min-w-[200px] p-1.5">
