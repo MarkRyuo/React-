@@ -7,7 +7,7 @@ import { useState } from "react";
 function Counter() {
 
     const [count, setCount] = useState(0);
-    const [theme, setTheme] = useState("Black")
+    const [theme, setTheme] = useState()
 
     const increment = () => {
         setCount(prevCount => prevCount + 1)
@@ -15,9 +15,9 @@ function Counter() {
 
     const changeColor = () => {
         setTheme(() => {
-            if(count <= -1 ){
+            if(count <= 0 ){
                 return "Red"
-            }else if(count > 1 ){
+            }else if(count >= 1 ){
                 return "Green"
             }
 
