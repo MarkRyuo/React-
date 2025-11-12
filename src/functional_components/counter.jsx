@@ -24,10 +24,15 @@ function Counter() {
     }, [count])
 
     useEffect(() => {
+
         const handleKey = (e) => {
             if(e.key === "Enter") {
                 e.preventDefault()
                 setCount(prevCount => prevCount + 1)
+            }else if(e.key === "Backspace"){
+                e.preventDefault()
+                setCount(prevCount => prevCount - 1)
+                console.log(e)
             }
         }
 
