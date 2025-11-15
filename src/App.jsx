@@ -1,4 +1,5 @@
 import './App.css'
+import Class_Card from './class_components/class_card.jsx'
 import Counter from './functional_components/counter.jsx'
 import Func_Card from './functional_components/func_card.jsx'
 
@@ -22,6 +23,11 @@ function App() {
 
       <div>
         <Counter />
+      </div>
+
+
+      <div>
+        <Class_Card image="" title="Example01" text="The quick brown fox jumps over the lazy dog"/>
       </div>
     </>
   )

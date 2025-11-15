@@ -20,3 +20,5 @@ class Class_Card extends Component{
 
 
 }
+
+export default Class_Card;
