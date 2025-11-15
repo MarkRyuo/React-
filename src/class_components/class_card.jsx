@@ -3,19 +3,22 @@ import { Component } from "react";
 
 class Class_Card extends Component{
 
-    constructor({image, title, text}){
-        super()
-        this.image = image;
-        this.title = title;
-        this.text = text;
+    constructor(props){
+        super(props)
+
     }
 
     render(){
-        <div>
-            <img src={this.image} alt="" srcset="" />
-            <h1>{this.title}</h1>
-            <p>{this.text}</p>
-        </div>
+
+        const [image, title, text] = this.props
+
+        return (
+            <div>
+                <img src={image} alt="" srcset="" />
+                <h1>{title}</h1>
+                <p>{text}</p>
+            </div>
+        )
     }
 
 
