@@ -9,26 +9,18 @@ function App() {
     <>
       <div className='grid grid-cols-2 justify-items-center'>
           <Func_Card 
-          image="https://i.pinimg.com/736x/fc/b3/7b/fcb37b0d9a614477f84cbd7f6866fb8c.jpg" 
-          title="Psychopath 01"
-          text="The quick brown fox jumps over the lazy dog!"
+          image="https://i.pinimg.com/1200x/68/18/8d/68188d6e515e2196a2f2e506cc4e1a33.jpg" 
+          title="Isaki Migari"
+          text="Insomniacs After School"
           />
 
-          <Func_Card 
-          image="https://i.pinimg.com/1200x/de/f6/8a/def68aebf65ca924190ae2589c1d960d.jpg"
-          title="Psychopath 02"
-          text="The quick brown fox jumps over the lazy dog!"
-          />
+          <Class_Card 
+          image="https://i.pinimg.com/736x/9e/fa/79/9efa79625639b129f08012a2a585a9c2.jpg" 
+          title="Hiro Segawa" 
+          text="A Couple of Cuckoos"/>
+         
       </div>
 
-      <div>
-        <Counter />
-      </div>
-
-
-      <div>
-        <Class_Card image="" title="Example01" text="The quick brown fox jumps over the lazy dog"/>
-      </div>
     </>
   )
 }

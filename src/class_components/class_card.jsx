@@ -3,7 +3,10 @@ import React, { Component } from "react";
 class Class_Card extends Component {
   constructor(props) {
     super(props);
+
   }
+
+  
 
   render() {
     const {image, title, text} = this.props;
